@@ -19,6 +19,20 @@ namespace ConsoleApp1
             int charY;
             int mapX = 10;
             int mapY = 10;
+
+            if (args == null || args.Length == 0)
+            {
+                charX = 4;
+                charY = 4;
+            }
+            else
+            {
+                //---this line is just for checking whether the input is actually grabbed or not, and should just print the value----
+                //Console.WriteLine(Convert.ToInt32(args));
+                charX = 2;
+                charY = 2;
+            }
+
             while (endGame == false)
             {
 
@@ -32,21 +46,6 @@ namespace ConsoleApp1
                 }
                 Console.Clear();
                 ShowGrid(grid);
-
-
-                if (args == null || args.Length == 0)
-                {
-                    charX = 4;
-                    charY = 4;
-                }
-                else
-                {
-                    //---this line is just for checking whether the input is actually grabbed or not, and should just print the value----
-                    //Console.WriteLine(Convert.ToInt32(args));
-                    charX = 2;
-                    charY = 2;
-                }
-
                 Console.SetCursorPosition(charX, charY);
                 Console.Write("S");
                 //Console.ReadKey();
