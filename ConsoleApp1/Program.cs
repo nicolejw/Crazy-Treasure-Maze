@@ -15,13 +15,13 @@ namespace ConsoleApp1
             Random random = new Random();
             Console.Title = "Crazy Treasure Maze";
             bool endGame = false;
-
+            int charX;
+            int charY;
+            int mapX = 10;
+            int mapY = 10;
             while (endGame == false)
             {
-                int charX;
-                int charY;
-                int mapX = 10;
-                int mapY = 10;
+
                 char[,] grid = new char[mapX, mapY];
                 for (int x = 0; x < mapX; ++x)
                 {
@@ -36,8 +36,8 @@ namespace ConsoleApp1
 
                 if (args == null || args.Length == 0)
                 {
-                    charX = 5;
-                    charY = 5;
+                    charX = 4;
+                    charY = 4;
                 }
                 else
                 {
