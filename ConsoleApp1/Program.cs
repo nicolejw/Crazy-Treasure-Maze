@@ -64,7 +64,7 @@ namespace ConsoleApp1
                     }
                 }
                 Console.Clear();
-                ShowGrid(grid);
+                others.ShowGrid(grid);
                 Console.SetCursorPosition(charX, charY);
                 Console.Write("S");
                 //Console.ReadKey();
@@ -163,32 +163,36 @@ namespace ConsoleApp1
 
         }
 
-        static void ShowGrid(char[,] g)
-        {
-            for (int x = 0; x < 10; ++x)
-            {
-                for (int y = 0; y < 10; ++y)
-                {
-                    Console.Write("x", g[x, y]);
-                }
-                Console.WriteLine();
-            }
-        }  
+		public class others
+		{
 
-        static void ghostMove()
-        {
+			internal static void ShowGrid(char[,] g)
+			{
+				for (int x = 0; x < 10; ++x)
+				{
+					for (int y = 0; y < 10; ++y)
+					{
+						Console.Write("x", g[x, y]);
+					}
+					Console.WriteLine();
+				}
+			}
 
-        }
-        //static void rngGen(Random ra)
-        //{
-        //    for (int)
-        //}
+			public static void seedCheck(int valueToCheck)
+			{
+				Console.Write(valueToCheck.ToString());
+			}
+			//static void rngGen(Random ra)
+			//{
+			//    for (int)
+			//}
 
-        //static void seedGen(int seed)
-        //{
-        //    Random random = new Random(seed);
+			//static void seedGen(int seed)
+			//{
+			//    Random random = new Random(seed);
+			//}
 
+		}
 
-        //}
-    }
+	}
 }
