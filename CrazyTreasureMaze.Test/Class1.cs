@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
+using ConsoleApp1;
 
 namespace CrazyTreasureMaze.Test
 {
@@ -11,24 +12,21 @@ namespace CrazyTreasureMaze.Test
 	public class testSuite
 	{
 		[Test]
-		public void arrayDrawn()
+		public void atestTest()
 		{
-			//Arrange
-			int x = 10;
-			int y = 10;
-			//Act
-			int output = x + y;
-			//Assert
-			Assert.AreEqual(x, y);
+			int result = 10;
+			int expected = Program.Equals();
+
+
 		}
 		[Test]
 		public void seedChecker()
 		{
-			//Arrange
+			bool result = Program.seedChk(0);
+			bool expected = false;
+			Assert.AreEqual(expected, result);
 
-			//Act
-
-			//Assert
+			
 		}
 
 	}
