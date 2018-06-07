@@ -11,14 +11,15 @@ namespace CrazyTreasureMaze.Test
 	[TestFixture]
 	public class testSuite
 	{
-		[Test]
-		public void atestTest()
-		{
-			int result = 10;
-			int expected = Program.Equals();
-
-
-		}
+		//[Test]
+		//public void arraySizeChecker()
+		//{
+		//	//int result = 10;
+		//	//int expected = Program.Equals(Program.Others.ShowGrid(char[10,10]));
+		//	//Assert.AreEqual(expected, result);
+		//	//---------nott entierly sure how to test the array, since it is made of char instead of an int---------
+		//	//Maybe useing .Length?
+		//}
 		[Test]
 		public void seedChecker()
 		{
@@ -28,6 +29,31 @@ namespace CrazyTreasureMaze.Test
 
 			
 		}
+		[Test]
+		public void wallCheckTest1()
+		{
+			var npc = new Program.Npc();
+			var result = Program.Npc.wallCheck(10);
+			var expected = false;
+			Assert.IsFalse(expected);
+			
+		}
+		[Test]
+		public void wallCheckTest2()
+		{
+			var npc = new Program.Npc();
+			var result = Program.Npc.wallCheck(-1);
+			var expected = false;
+			Assert.IsFalse(expected);
+
+		}
+		//[Test]
+		//public void wallCheck_NullTest()
+		//{
+		//	bool result = Program.Npc.wallCheck(-5);
+		//	//bool expected = true;
+		//	//Assert.IsTrue();
+		//}
 
 	}
 }
